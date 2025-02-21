@@ -15,7 +15,6 @@ button [+] increases by 1 the value of the counter
 button [-] decreases by 1 the value of the counter
 button [Reset] resets to 0 the value of the counter
 
-# Screenshot
+## Screenshot
 
-
-![Uploading Immagine 21-02-25 - 10.29.jpg…]()
+screenshot.jpg
