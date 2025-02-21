@@ -17,4 +17,4 @@ button [Reset] resets to 0 the value of the counter
 
 ## Screenshot
 
-screenshot.jpg
+![Screenshot del progetto](screenshot.jpg)
