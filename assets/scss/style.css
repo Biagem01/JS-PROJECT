@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box; /* Per evitare problemi di dimensioni */
+    font-family: "Yuji Syuku", serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #533483);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Animazione per rendere il gradient più dinamico */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.text {
+    margin-bottom: 40px; /* Distanza più equilibrata sopra il contatore */
+    color: white;
+    font-size: 3.5rem; /* Titolo più grande */
+    font-weight: 200;
+    text-transform: uppercase; /* Tutto in maiuscolo */
+    letter-spacing: 3px; /* Spazio tra le lettere */
+    text-shadow: 0px 0px 20px rgba(138, 43, 226, 0.8); /* Effetto neon viola */
+    animation: glow 1.5s infinite alternate; /* Effetto luminoso */
+}
+
+/* Animazione glow per un effetto pulsante */
+@keyframes glow {
+    0% { text-shadow: 0px 0px 10px rgba(138, 43, 226, 0.5); }
+    100% { text-shadow: 0px 0px 20px rgba(138, 43, 226, 1); }
+}
+
+.buttons {
+    display: flex; /* Aggiunto per far funzionare `gap` */
+    gap: 15px; /* Distanza tra i bottoni */
+}
+
+.buttons button {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #885ee4, #512da8);
+    color: white;
+    font-size: 2rem; /* Rende il testo più leggibile */
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombra più realistica */
+    transition: transform 0.2s ease-in-out
+}
+
+
+.reset {
+    margin-top: 20px; /* Distanza dal gruppo di bottoni sopra */
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.reset:hover{
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+
+.buttons button:hover {
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Larghezza fissa per il cerchio */
+    height: 120px; /* Altezza uguale alla larghezza per fare un cerchio */
+    color: white;
+    font-size: 2rem; /* Testo più grande */
+    font-weight: bold;
+    background: linear-gradient(to right, #885ee4, #512da8);
+    border: 5px ;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%; /* Trasforma il div in un cerchio */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
