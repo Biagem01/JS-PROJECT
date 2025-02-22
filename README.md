@@ -5,7 +5,7 @@
 A simple JavaScript application that allows the user to increase and decrease the value of a counter.
 
 # Link
-https://velvety-boba-765a82.netlify.app/
+https://purple-counter.netlify.app/
 
 # Usage
 
