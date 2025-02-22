@@ -1,8 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const minusButton = document.querySelector(".minus");
-    const plusButton = document.querySelector(".plus");
-    const resetButton = document.querySelector(".reset");
-    const numberDisplay = document.querySelector(".number");
+    const container = document.querySelector(".buttons");
+
+    // Creazione degli elementi
+    const minusButton = document.createElement("button");
+    const numberDisplay = document.createElement("div");
+    const plusButton = document.createElement("button");
+    const resetButton = document.createElement("button");
+
+    // Aggiunta delle classi
+    minusButton.classList.add("minus");
+    numberDisplay.classList.add("number");
+    plusButton.classList.add("plus");
+    resetButton.classList.add("reset");
+
+    // Testo nei pulsanti
+    minusButton.textContent = "-";
+    numberDisplay.textContent = "0";
+    plusButton.textContent = "+";
+    resetButton.textContent = "RESET";
+
+    // Creazione di un div separato per il pulsante reset
+    const resetContainer = document.createElement("div");
+    resetContainer.classList.add("reset-container"); // Per posizionarlo correttamente
+    resetContainer.appendChild(resetButton);
+
+    // Aggiunta degli elementi al DOM
+    container.appendChild(minusButton);
+    container.appendChild(numberDisplay);
+    container.appendChild(plusButton);
+
+    // Aggiunta del pulsante reset sotto
+    container.parentNode.appendChild(resetContainer);
 
     let count = 0;
 
@@ -13,24 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
         numberDisplay.textContent = count;
     }
 
-    function playSound(){
-        clickSound.currentTime = 0.4; // Riavvia il suono se è già in riproduzione
+    function playSound() {
+        clickSound.currentTime = 0.4;
         clickSound.play();
     }
 
-    function playResetSound(){
-        resetSound.currentTime=0;
+    function playResetSound() {
+        resetSound.currentTime = 0;
         resetSound.play();
     }
 
     minusButton.addEventListener("click", function () {
-        if(count==0){
+        if (count == 0) {
             playSound();
-            return
+            return;
         }
         count--;
         updateDisplay();
-
         playSound();
     });
 
